@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { Layout } from '../components/Layout'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -63,8 +62,7 @@ export const Blog = () => {
   }
 
   return (
-    <Layout>
-      <div className="min-h-screen bg-background relative">
+    <div className="min-h-screen bg-background relative">
         {/* Background pattern */}
         <div className="absolute inset-0 bg-tech-grid bg-tech-grid-size opacity-[0.02]" />
         
@@ -322,6 +320,5 @@ export const Blog = () => {
           </motion.section>
         </div>
       </div>
-    </Layout>
   )
 } 
