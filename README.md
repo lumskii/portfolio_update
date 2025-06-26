@@ -111,9 +111,9 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 ## 👤 Author
 
 **Your Name**
-- Website: [your-website.com](https://your-website.com)
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [@yourlinkedin](https://linkedin.com/in/yourlinkedin)
+- Website: [your-website.com](https://mike-sho.com)
+- GitHub: [@yourusername](https://github.com/lumskii)
+- LinkedIn: [@yourlinkedin](https://linkedin.com/in/olumike-sholola)
 
 ---
 

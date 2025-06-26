@@ -92,7 +92,7 @@ export const Contact = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-1">Email</h3>
-                <p className="text-gray-400">contact@example.com</p>
+                <p className="text-gray-400">olusholola@gmail.com</p>
               </div>
             </motion.div>
             <motion.div
@@ -104,7 +104,7 @@ export const Contact = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-1">Phone</h3>
-                <p className="text-gray-400">+1 (555) 123-4567</p>
+                <p className="text-gray-400">+1 (602) 492-1281</p>
               </div>
             </motion.div>
             <motion.div
@@ -116,7 +116,7 @@ export const Contact = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-1">Location</h3>
-                <p className="text-gray-400">San Francisco, CA</p>
+                <p className="text-gray-400">Phoenix, AZ</p>
               </div>
             </motion.div>
           </motion.div>
@@ -199,7 +199,7 @@ export const Contact = () => {
             </div>
             <button
               type="submit"
-              className="bg-mint-400 hover:bg-mint-500 text-gray-900 py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+              className="bg-blue-600 hover:bg-mint-500 text-gray-50 py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
             >
               Send Message <SendIcon size={18} />
             </button>

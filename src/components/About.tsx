@@ -75,7 +75,7 @@ export const About = () => {
               <div className="absolute inset-0 border-2 border-warm-yellow-400 rounded-lg transform translate-x-4 translate-y-4 -z-10"></div>
               <div className="bg-gradient-to-tr from-purple-600 to-blue-500 rounded-lg overflow-hidden aspect-square">
                 <img
-                  src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80"
+                  src="https://previews.dropbox.com/p/thumb/ACri4gnl3uvXDPYwUJWpNPLYzGR28iFzzrck5aeH4O_mzhuiUfwLiH3ueQC9TZHQbgqWcuyGbndzyvB9pzVhZyMboALLMNhZSEqoWp6QIKrOfNr3avvEp7VRo3e27YzFDGzgCbwAw4KpIsGXh1dIGS2eWgVouyeWDNmaTBHxBDkbij5bZIdXuQSqByldtjuzcx5UURg3Ja_52FwB2KyIaCj8A3UlB4EAHkU84h5kCSD0jpQZs-gb4-LD1GeZnXVvXH-uhJz_ebGgAMChoTIIFH7kUbrwWl1wKA4xMR5MfE2A6TySWsvUymIa51suu5gE7BliJzmOMVVQU3aVXToSN1pY/p.png?is_prewarmed=true"
                   alt="Developer Portrait"
                   className="w-full h-full object-cover mix-blend-overlay opacity-75"
                 />
@@ -105,7 +105,7 @@ export const About = () => {
               Who I Am
             </h3>
             <p className="text-slate-700 dark:text-gray-300 mb-6 text-lg leading-relaxed">
-              I'm a passionate software developer with a keen eye for creating
+              Hello, my name is Michael Sholola(MikeSho). I'm a passionate software developer with a keen eye for creating
               elegant, user-centered digital experiences. With a background in
               computer science and a love for clean, efficient code, I build
               solutions that are both technically robust and intuitively usable.
