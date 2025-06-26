@@ -1,0 +1,101 @@
+/* Professional Male Developer Theme */
+:root {
+  /* Layout & Border Radius */
+  --radius: 0.5rem;
+  --radius-soft: 24px;
+  --radius-pill: 9999px;
+  
+  /* Brand Colors - Professional Tech Blue */
+  --clr-brand: #0369a1;        /* Deep tech blue */
+  --clr-brand-subtle: #0ea5e9; /* Lighter tech blue */
+  
+  /* Light Theme - Professional & Clean */
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 201 96% 32%;       /* Professional blue */
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222.2 84% 4.9%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222.2 84% 4.9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 201 96% 32%;
+  
+  /* Custom Theme Colors */
+  --clr-text: #1e293b;         /* Professional dark slate */
+  --clr-text-subtle: #475569;  /* Medium slate */
+  --clr-bg: #f8fafc;           /* Cool light background */
+  --clr-bg-subtle: #f1f5f9;    /* Subtle cool background */
+  
+  /* Font Variables */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.dark {
+  /* Dark Theme - Sophisticated & High-Tech */
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 217.2 91.2% 59.8%; /* Electric blue */
+  --primary-foreground: 222.2 84% 4.9%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 217.2 91.2% 59.8%;
+  
+  /* Custom Dark Theme Colors */
+  --clr-text: #e2e8f0;         /* Light slate */
+  --clr-text-subtle: #94a3b8;  /* Medium slate */
+  --clr-bg: #0f172a;           /* Deep navy */
+  --clr-bg-subtle: #1e293b;    /* Darker slate */
+  --clr-brand: #3b82f6;        /* Bright blue */
+  --clr-brand-subtle: #60a5fa; /* Electric blue */
+}
+
+/* Animations & Effects */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px hsl(var(--primary)); }
+  50% { box-shadow: 0 0 20px hsl(var(--primary)), 0 0 30px hsl(var(--primary)); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Import Professional Typography at the top */
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+} 
