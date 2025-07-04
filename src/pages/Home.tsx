@@ -10,7 +10,7 @@ export function Home() {
   return (
     <>
       <Helmet>
-        <title>DevPortfolio - Software Developer</title>
+        <title>MikeSho - Software Developer</title>
         <meta
           name="description"
           content="Professional software developer portfolio showcasing expertise in web development and software engineering"

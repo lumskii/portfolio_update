@@ -3,7 +3,7 @@ import {
   GithubIcon,
   TwitterIcon,
   LinkedinIcon,
-  InstagramIcon,
+  // InstagramIcon,
 } from 'lucide-react'
 
 export const Footer = () => {
@@ -21,29 +21,29 @@ export const Footer = () => {
           </div>
           <div className="flex space-x-6">
             <a
-              href="#"
+              href="https://github.com/lumskii"
               className="text-gray-400 hover:text-white transition-colors"
             >
               <GithubIcon size={20} />
             </a>
             <a
-              href="#"
+              href="https://bsky.app/profile/mikesho.bsky.social"
               className="text-gray-400 hover:text-white transition-colors"
             >
               <TwitterIcon size={20} />
             </a>
             <a
-              href="#"
+              href="https://linkedin.com/in/olumike-sholola"
               className="text-gray-400 hover:text-white transition-colors"
             >
               <LinkedinIcon size={20} />
             </a>
-            <a
+            {/* <a
               href="#"
               className="text-gray-400 hover:text-white transition-colors"
             >
               <InstagramIcon size={20} />
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="border-t border-gray-800 my-8"></div>
