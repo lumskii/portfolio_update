@@ -15,7 +15,7 @@ export function App() {
     <ThemeProvider>
       <Router>
         <Helmet>
-          <title>DevPortfolio - Software Developer</title>
+          <title>MikeSho - Software Developer</title>
           <meta
             name="description"
             content="Professional software developer portfolio showcasing projects and expertise in web development"

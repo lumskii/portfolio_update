@@ -105,7 +105,7 @@ export const About = () => {
               Who I Am
             </h3>
             <p className="text-slate-700 dark:text-gray-300 mb-6 text-lg leading-relaxed">
-              Hello, my name is Michael Sholola(MikeSho). I'm a passionate software developer with a keen eye for creating
+              Hello, my name is Michael Sholola(Mike). I'm a passionate software developer with a keen eye for creating
               elegant, user-centered digital experiences. With a background in
               computer science and a love for clean, efficient code, I build
               solutions that are both technically robust and intuitively usable.
