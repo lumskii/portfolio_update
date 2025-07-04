@@ -75,7 +75,7 @@ export const About = () => {
               <div className="absolute inset-0 border-2 border-warm-yellow-400 rounded-lg transform translate-x-4 translate-y-4 -z-10"></div>
               <div className="bg-gradient-to-tr from-purple-600 to-blue-500 rounded-lg overflow-hidden aspect-square">
                 <img
-                  src="https://www.dropbox.com/scl/fi/v6bu4bgv70uk1p4drrot4/my-img2-1.png?rlkey=8ocns87js2w88fo8qw9k004pw&st=mkwizjat&dl=0"
+                  src="https://www.dropbox.com/scl/fi/v6bu4bgv70uk1p4drrot4/my-img2-1.png?rlkey=8ocns87js2w88fo8qw9k004pw&st=mkwizjat&raw=1"
                   alt="Developer Portrait"
                   className="w-full h-full object-cover mix-blend-overlay opacity-75"
                 />
