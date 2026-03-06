@@ -29,8 +29,8 @@ export const Projects = () => {
         'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
       tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       category: 'fullstack',
-      liveLink: 'https://example.com',
-      githubLink: 'https://github.com/example',
+      liveLink: 'https://lumskii.github.io/modern-shop-dotnet/',
+      githubLink: 'https://github.com/lumskii/modern-shop-dotnet',
     },
     {
       id: 2,
@@ -41,8 +41,8 @@ export const Projects = () => {
         'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80',
       tags: ['React', 'Firebase', 'Material UI', 'Redux'],
       category: 'frontend',
-      liveLink: 'https://example.com',
-      githubLink: 'https://github.com/example',
+      liveLink: 'https://schedulebuddy2025.web.app/',
+      githubLink: 'https://github.com/lumskii/schedule-buddy',
     },
     {
       id: 3,
@@ -53,7 +53,8 @@ export const Projects = () => {
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
       tags: ['Node.js', 'Express', 'PostgreSQL', 'Docker'],
       category: 'backend',
-      githubLink: 'https://github.com/example',
+      liveLink: 'https://accreditedfs.com',
+      githubLink: 'https://github.com/lumskii/accreditedFS',
     },
     {
       id: 4,
@@ -64,8 +65,8 @@ export const Projects = () => {
         'https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
       tags: ['React', 'D3.js', 'Weather API', 'Styled Components'],
       category: 'frontend',
-      liveLink: 'https://example.com',
-      githubLink: 'https://github.com/example',
+      liveLink: 'https://lumskii.github.io/07-nasa-space-explorer/',
+      githubLink: 'https://github.com/lumskii/07-nasa-space-explorer',
     },
     {
       id: 5,
@@ -76,7 +77,7 @@ export const Projects = () => {
         'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80',
       tags: ['Node.js', 'GraphQL', 'MongoDB', 'Redis'],
       category: 'backend',
-      githubLink: 'https://github.com/example',
+      githubLink: 'https://github.com/lumskii/voice_agent',
     },
     {
       id: 6,
@@ -87,8 +88,8 @@ export const Projects = () => {
         'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
       tags: ['React', 'Framer Motion', 'Tailwind CSS', 'Netlify'],
       category: 'frontend',
-      liveLink: 'https://example.com',
-      githubLink: 'https://github.com/example',
+      liveLink: 'https://lumskii.github.io/01-prj-personal-site/',
+      githubLink: 'https://github.com/lumskii/01-prj-personal-site',
     },
   ]
 

@@ -36,7 +36,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/95 to-black/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         <p className="text-gray-300 text-sm mb-4 line-clamp-3">{description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
@@ -55,7 +55,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               href={liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-mint-400 hover:bg-mint-500 text-gray-900 text-sm py-1 px-3 rounded-full flex items-center gap-1 transition-colors"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground text-sm py-1 px-3 rounded-full flex items-center gap-1 transition-colors font-medium"
             >
               <ExternalLinkIcon size={14} /> Live
             </a>
@@ -75,7 +75,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         <p className="text-gray-400 text-sm mb-4 line-clamp-2">{description}</p>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mb-4">
           {tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
@@ -88,6 +88,28 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             <span className="text-gray-400 text-xs">
               +{tags.length - 3} more
             </span>
+          )}
+        </div>
+        <div className="flex gap-3">
+          {liveLink && (
+            <a
+              href={liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground text-sm py-2 px-4 rounded-full flex items-center gap-2 transition-colors font-medium"
+            >
+              <ExternalLinkIcon size={16} /> Live Demo
+            </a>
+          )}
+          {githubLink && (
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-700 hover:bg-gray-600 text-white text-sm py-2 px-4 rounded-full flex items-center gap-2 transition-colors font-medium"
+            >
+              <GithubIcon size={16} /> Code
+            </a>
           )}
         </div>
       </div>
