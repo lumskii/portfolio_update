@@ -1,20 +1,74 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { MailIcon, PhoneIcon, MapPinIcon, SendIcon } from 'lucide-react'
+import { MailIcon, PhoneIcon, MapPinIcon, SendIcon, CheckCircleIcon, AlertCircleIcon } from 'lucide-react'
+import * as emailjs from '@emailjs/browser'
+import { emailjsConfig } from '../config/emailjs'
 
 export const Contact = () => {
   const controls = useAnimation()
+  const formRef = useRef<HTMLFormElement>(null)
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true,
   })
+  const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+  const [statusMessage, setStatusMessage] = useState('')
 
   useEffect(() => {
     if (inView) {
       controls.start('visible')
     }
   }, [controls, inView])
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    
+    // Check if EmailJS is configured
+    if (!emailjsConfig.templateId || !emailjsConfig.publicKey) {
+      setFormStatus('error')
+      setStatusMessage('Email service is not configured. Please contact me directly at olusholola@gmail.com')
+      setTimeout(() => {
+        setFormStatus('idle')
+        setStatusMessage('')
+      }, 7000)
+      return
+    }
+    
+    setFormStatus('sending')
+    setStatusMessage('')
+
+    try {
+      const result = await emailjs.sendForm(
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
+        formRef.current!,
+        emailjsConfig.publicKey
+      )
+
+      if (result.text === 'OK') {
+        setFormStatus('success')
+        setStatusMessage('Message sent successfully! I\'ll get back to you soon.')
+        formRef.current?.reset()
+        
+        // Reset status after 5 seconds
+        setTimeout(() => {
+          setFormStatus('idle')
+          setStatusMessage('')
+        }, 5000)
+      }
+    } catch (error) {
+      setFormStatus('error')
+      setStatusMessage('Failed to send message. Please try again or email me directly at olusholola@gmail.com')
+      console.error('EmailJS Error:', error)
+      
+      // Reset status after 7 seconds
+      setTimeout(() => {
+        setFormStatus('idle')
+        setStatusMessage('')
+      }, 7000)
+    }
+  }
 
   const headerVariants = {
     hidden: {
@@ -121,6 +175,8 @@ export const Contact = () => {
             </motion.div>
           </motion.div>
           <motion.form
+            ref={formRef}
+            onSubmit={handleSubmit}
             initial="hidden"
             animate={controls}
             variants={{
@@ -139,6 +195,24 @@ export const Contact = () => {
             }}
             className="md:w-2/3 space-y-6"
           >
+            {statusMessage && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={`p-4 rounded-lg flex items-center gap-3 ${
+                  formStatus === 'success'
+                    ? 'bg-green-500/20 border border-green-500/50 text-green-400'
+                    : 'bg-red-500/20 border border-red-500/50 text-red-400'
+                }`}
+              >
+                {formStatus === 'success' ? (
+                  <CheckCircleIcon size={20} />
+                ) : (
+                  <AlertCircleIcon size={20} />
+                )}
+                <span>{statusMessage}</span>
+              </motion.div>
+            )}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label
@@ -150,7 +224,10 @@ export const Contact = () => {
                 <input
                   type="text"
                   id="name"
-                  className="w-full bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  name="user_name"
+                  required
+                  disabled={formStatus === 'sending'}
+                  className="w-full bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Your Name"
                 />
               </div>
@@ -164,7 +241,10 @@ export const Contact = () => {
                 <input
                   type="email"
                   id="email"
-                  className="w-full bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  name="user_email"
+                  required
+                  disabled={formStatus === 'sending'}
+                  className="w-full bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Your Email"
                 />
               </div>
@@ -179,7 +259,10 @@ export const Contact = () => {
               <input
                 type="text"
                 id="subject"
-                className="w-full bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                name="subject"
+                required
+                disabled={formStatus === 'sending'}
+                className="w-full bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
                 placeholder="Subject"
               />
             </div>
@@ -192,16 +275,20 @@ export const Contact = () => {
               </label>
               <textarea
                 id="message"
+                name="message"
                 rows={5}
-                className="w-full bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                required
+                disabled={formStatus === 'sending'}
+                className="w-full bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
                 placeholder="Your Message"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="bg-blue-600 hover:bg-mint-500 text-gray-50 py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+              disabled={formStatus === 'sending'}
+              className="bg-blue-600 hover:bg-mint-500 text-gray-50 py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
             >
-              Send Message <SendIcon size={18} />
+              {formStatus === 'sending' ? 'Sending...' : 'Send Message'} <SendIcon size={18} />
             </button>
           </motion.form>
         </div>
